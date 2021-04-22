@@ -1,0 +1,7 @@
+:8080 {
+  import dnspod
+  import alidns
+  import cloudflare
+
+  respond "Hello Caddy"
+}
