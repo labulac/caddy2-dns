@@ -20,4 +20,4 @@ COPY ./cloudflare /etc/caddy/cloudflare
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
-HEALTHCHECK --interval=5s --timeout=3s CMD caddy || exit 1
+HEALTHCHECK --interval=5s --timeout=3s CMD caddy version || exit 1
