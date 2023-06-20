@@ -37,8 +37,8 @@ RUN set -eux; \
 	chmod +x /usr/bin/caddy; \
 	caddy version; \
     caddy add-package github.com/caddy-dns/dnspod; \
-    caddy add-packsge github.com/caddy-dns/alidns; \
-    caddy add-packsge github.com/caddy-dns/cloudflare; \
+    caddy add-package github.com/caddy-dns/alidns; \
+    caddy add-package github.com/caddy-dns/cloudflare; \
     caddy version
 
 # See https://caddyserver.com/docs/conventions#file-locations for details
