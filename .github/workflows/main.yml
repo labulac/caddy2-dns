@@ -3,12 +3,7 @@ name: main
 on:
   push:
     branches: [main]
-  # 定时触发编译(每天早5点)
-  schedule:
-     - cron: '0 17 * * *'
-  # 点☆Star触发开始编译
-  watch:  
-     types: [started]
+
   
 jobs:
   build:
@@ -23,6 +18,6 @@ jobs:
               publish: true
               imageName: 740162752/caddy2-dns
               platform: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 # 你准备构建的镜像平台
-              tag: bak # 默认latest，可以针对平台，修改tag
+              tag: latest  
               dockerUser: 740162752 # docker hub userid
               dockerPassword: ${{ secrets.DOCKER_PASSWORD }} # docker hub password
